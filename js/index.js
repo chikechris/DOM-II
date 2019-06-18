@@ -44,3 +44,11 @@ wheelImg[1].addEventListener(
   },
   false
 );
+
+// [ ] `drag / drop`
+
+//Load Event
+const myImage = document.querySelector(".img-content img");
+myImage.addEventListener("load", function() {
+  alert("image  picture has loaded");
+});
