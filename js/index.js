@@ -14,3 +14,12 @@ logoChange.addEventListener(
   },
   false
 );
+
+//[] `keydown
+//On the Web page if CTRL key is presses an alert will populate:"The ctrl  key has been preesed"
+window.addEventListener("keydown", checkKeyPress, false);
+function checkKeyPress(key) {
+  if (key.keyCode == "17") {
+    alert("The ctrl  key has been preesed");
+  }
+}
