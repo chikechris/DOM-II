@@ -23,3 +23,24 @@ function checkKeyPress(key) {
     alert("The ctrl  key has been preesed");
   }
 }
+
+//* []`wheel`
+//when the mouse wheel is hovered over the 2nd img, it will shrink it
+
+wheelImg = document.getElementsByTagName("img");
+
+wheelImg[1].addEventListener(
+  "wheel",
+  function() {
+    wheelImg[1].style.padding = "85px";
+
+    wheelImg[1].addEventListener(
+      "wheel",
+      function() {
+        wheelImg[1].style.padding = "20px";
+      },
+      false
+    );
+  },
+  false
+);
