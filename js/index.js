@@ -45,8 +45,6 @@ wheelImg[1].addEventListener(
   false
 );
 
-// [ ] `drag / drop`
-
 //Load Event
 
 const myImage = document.querySelector(".img-content img");
@@ -54,19 +52,30 @@ myImage.addEventListener("load", function() {
   alert("image  picture has loaded");
 });
 
-// //Resize
-// function displayWindowSize() {
-//   let w = document.documentElement.clientWidth;
-//   let h = document.documentElement.clientHeight;
+//Resize
+//The nav bar background color changes as the screen rezies
+const mainNav = document.querySelector(".main-navigation");
 
-//   document.getElementById("result").innerHTML =
-//     "Width: " + w + ", " + "Height: " + h;
-// }
+window.addEventListener("resize", function() {
+  mainNav.style.backgroundColor = "grey";
+});
 
-// window.addEventListener("resize", displayWindowSize);
+//Drag
+// As you drag the picture, the surrounding border grows larger
+let borderLarge = 0;
 
-// displayWindowSize();
+const advtImage = document.querySelector("section img");
+advtImage.addEventListener("drag", event => {
+  console.log(event);
+  advtImage.style.border = `${borderLarge}px solid red`;
+  borderLarge++;
+});
 
+advtImage.addEventListener("dragend", event => {
+  console.log(event);
+  advtImage.style.border = "";
+  borderLarge = 0;
+});
 //Scroll Event
 //Alerts you when reach bottom of page
 window.addEventListener("scroll", () => {
@@ -93,6 +102,8 @@ dbClick.addEventListener(
   false
 );
 
+// Select, Focus and Blurr.
+
 const textArea = document.createElement("input");
 textArea.type = "text";
 textArea.value = " Select Your Destination!";
@@ -109,6 +120,7 @@ textArea.addEventListener(
   "focus",
   function(e) {
     e.target.style.background = "red";
+    event.preventDefault();
   },
   true
 );
