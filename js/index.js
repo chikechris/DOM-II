@@ -110,7 +110,6 @@ textArea.value = " Select Your Destination!";
 textArea.style.fontSize = "15px";
 let selectedDestination = document.querySelector(".content-destination h2");
 selectedDestination.appendChild(textArea);
-selectedDestination.style.marginLeft = "20px";
 
 let destinImg = document.querySelector(".content-destination img");
 textArea.addEventListener("select", function() {
@@ -128,14 +127,8 @@ textArea.addEventListener(
 textArea.addEventListener(
   "blur",
   function(e) {
+    e.target.preventPropagation;
     e.target.style.background = "grey";
   },
   true
 );
-
-const noDupImg = document.querySelectorAll(".img-content")[0];
-const advImg = document.querySelectorAll(".img-content")[1];
-noDupImg.addEventListener("contextmenu", e => {
-  e.stopPropagation();
-  noDupImg.style.display = "none";
-});
