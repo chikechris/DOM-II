@@ -16,7 +16,7 @@ logoChange.addEventListener(
 );
 
 //[] `keydown
-//On the Web page if CTRL key is presses an alert will populate:"The ctrl  key has been preesed"
+//On the Web page if CTRL key is pressed an alert will populate:"The ctrl  key has been preesed"
 window.addEventListener("keydown", checkKeyPress, false);
 function checkKeyPress(key) {
   if (key.keyCode == "17") {
@@ -25,19 +25,19 @@ function checkKeyPress(key) {
 }
 
 //* []`wheel`
-//when the mouse wheel is hovered over the 2nd img, it will shrink it
+//when the mouse is wheeled is over the funBus img, it will shrink it
 
-wheelImg = document.getElementsByTagName("img");
+wheelImg = document.querySelector(".img");
 
-wheelImg[1].addEventListener(
+wheelImg.addEventListener(
   "wheel",
   function() {
-    wheelImg[1].style.padding = "85px";
+    wheelImg.style.padding = "200px";
 
-    wheelImg[1].addEventListener(
+    wheelImg.addEventListener(
       "wheel",
       function() {
-        wheelImg[1].style.padding = "20px";
+        wheelImg.style.padding = "15px";
       },
       false
     );
