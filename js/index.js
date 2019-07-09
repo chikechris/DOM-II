@@ -52,10 +52,6 @@ window.addEventListener("load", function() {
     `Welcome To Fun Bus Travel Agency Website. Click "Ok" To Continue`
   );
 });
-// const myImage = document.querySelector(".img");
-// myImage.addEventListener("load", function() {
-//   alert("image  picture has loaded");
-// });
 
 //Resize
 //The nav bar background color changes as the screen rezies
@@ -66,13 +62,13 @@ window.addEventListener("resize", function() {
 });
 
 //Drag
-// As you drag the picture, the surrounding border grows larger
+// As you drag the adventure.jpg  picture, the surrounding border grows larger
 let borderLarge = 0;
 
-const advtImage = document.querySelector("section img");
+const advtImage = document.querySelector(".img2");
 advtImage.addEventListener("drag", event => {
   console.log(event);
-  advtImage.style.border = `${borderLarge}px solid red`;
+  advtImage.style.border = `${borderLarge}px solid black`;
   borderLarge++;
 });
 
