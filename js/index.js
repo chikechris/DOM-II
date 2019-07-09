@@ -88,20 +88,13 @@ window.addEventListener("scroll", () => {
   }
 });
 
-//DB Click  enlarges h2 when you double click
+//when you double  Click  on Welcome To Fun Bus! it enlarges
 
 const dbClick = document.querySelector(".intro h2");
 
-let size = 10;
-let FontSize = size + "px";
-dbClick.addEventListener(
-  "dblclick",
-  function() {
-    size = size * 4;
-    dbClick.style["font-size"] = "120px";
-  },
-  false
-);
+dbClick.addEventListener("dblclick", function() {
+  dbClick.style.fontSize = "50px";
+});
 
 // Select, Focus and Blurr.
 
