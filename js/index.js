@@ -25,7 +25,7 @@ function checkKeyPress(key) {
 }
 
 //* []`wheel`
-//when the mouse is wheeled is over the funBus img, it will shrink it
+//when the mouse is wheeled is over the funBus img, it will shrink the image
 
 wheelImg = document.querySelector(".img");
 
@@ -47,10 +47,15 @@ wheelImg.addEventListener(
 
 //Load Event
 
-const myImage = document.querySelector(".img-content img");
-myImage.addEventListener("load", function() {
-  alert("image  picture has loaded");
+window.addEventListener("load", function() {
+  this.alert(
+    `Welcome To Fun Bus Travel Agency Website. Click "Ok" To Continue`
+  );
 });
+// const myImage = document.querySelector(".img");
+// myImage.addEventListener("load", function() {
+//   alert("image  picture has loaded");
+// });
 
 //Resize
 //The nav bar background color changes as the screen rezies
